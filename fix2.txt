@@ -1,0 +1,46 @@
+git --version
+git config --global user.name "My name"
+git config --global user.email "Myemail@com"
+git config --global init.defaultBranch main
+git config --list
+
+git add READ.md
+git commit -m "Initial commit"
+git checkout -b feature1
+
+git add READ.md
+git commit -m "Add dog on row 4 and changed moose to mouse on row 2 in READ.md file"
+git checkout main
+
+git add READ.md
+git commit -m "Changed moose to mahmut on row 2 in READ.md"
+git merge feature1
+git commit -m "Merged main with feature1 and fixed merge conflict"
+
+
+git tag extinct
+git reset --hard HEAD~1
+git branch feature2
+git add READ.md
+git commit -m "Changed all 3 words so they begin with a big letter."
+
+git checkout feature2
+git add fix1.txt
+git commit -m "Added a fix1.txt file"
+git add fix2.txt
+git commit -m "Added a fix2.txt file"
+git checkout main
+
+git log
+q
+git log feature2
+q
+git cherry-pick a53411af783d2d4901d309c7ce6f9ccd2365b532
+
+git remote add origin https://github.com/alexander-tf2fan/JavaVerktyg-Labb1-2025.git
+git branch -M main
+git push -u origin main
+
+git add fix2.txt
+git commit -m "Added fix2.txt with all git commands I've done"
+git push
